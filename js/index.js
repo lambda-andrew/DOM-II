@@ -13,17 +13,9 @@
 const p = document.querySelectorAll('p');
 const pHover = event => {
   event.target.style.background = 'yellow';
-  // TweenMax.to("p", 1, {
-  //   y: -300,
-  //   ease: Bounce.easeOut
-  // });
 }
 const pNoHover = event => {
   event.target.style.background = '';
-  // TweenMax.to("p", 1, {
-  //   y: 0,
-  //   ease: Bounce.easeOut
-  // });
 }
 
 p.forEach(item => {
@@ -31,6 +23,28 @@ p.forEach(item => {
 });
 p.forEach(item => {
   item.addEventListener('mouseleave', pNoHover)
+});
+
+// IMAGES
+const img = document.querySelectorAll('img');
+const imgHover = event => {
+  TweenMax.to("img", 1, {
+    y: -300,
+    ease: Bounce.easeOut
+  });
+}
+const imgNoHover = event => {
+  TweenMax.to("img", 1, {
+    y: 0,
+    ease: Bounce.easeOut
+  });
+}
+
+img.forEach(item => {
+  item.addEventListener('mouseover', imgHover)
+});
+img.forEach(item => {
+  item.addEventListener('mouseleave', imgNoHover)
 });
 
 // All Nav Links - E.V.
