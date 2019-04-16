@@ -21,8 +21,24 @@ logo.addEventListener('mouseover', (event) => {
 });
 
 logo.addEventListener('mouseout', (event) => {
-    event.target.style.transition = 'transform .2s';
+    event.target.style.transition = 'transform .3s';
     event.target.style.transform = 'scale(1.0)';
 });
 
+const images = document.getElementsByTagName('img');
 
+images[1].addEventListener('mouseover', (event) => {
+    event.target.style.filter = 'brightness(150%)';
+});
+
+images[1].addEventListener('mouseout', (event) => {
+    event.target.style.filter = 'brightness(100%)';
+});
+
+images[2].addEventListener('mouseover', (event) => {
+    event.target.style.filter = 'brightness(150%)';
+});
+
+images[2].addEventListener('mouseout', (event) => {
+    event.target.style.filter = 'brightness(100%)';
+});
