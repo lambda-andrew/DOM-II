@@ -42,3 +42,17 @@ images[2].addEventListener('mouseover', (event) => {
 images[2].addEventListener('mouseout', (event) => {
     event.target.style.filter = 'brightness(100%)';
 });
+
+const destinationImg = document.getElementById('destImg');
+
+console.log(destinationImg);
+
+destinationImg.addEventListener('mouseover', (event) => {
+    event.target.style.transition = 'transform 3s';
+    event.target.style.transform = 'scale(1.1)';
+});
+
+destinationImg.addEventListener('mouseout', (event) => {
+    event.target.style.transition = 'transform 1.5s';
+    event.target.style.transform = 'scale(1.0)';
+});
