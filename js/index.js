@@ -1,8 +1,16 @@
 // Your code goes here
 
 //Global
-
-
+let container = document.querySelector('.container');
+let input = document.createElement('input');
+container.appendChild(input)
+input.addEventListener('keydown', (event)=>{event.target.style.background = "#a6ff4d"})
+input.addEventListener('keyup', (event)=>{event.target.style.background = "#66d9ff"})
+input.addEventListener('focusout', (event)=>{event.target.style.background = "white"})
+input.addEventListener('paste', myFunc)
+function myFunc(){
+  alert("CHEATING.")
+}
 //Nav
 let anchors = document.getElementsByTagName('a');
 let anchorArray = Array.from(anchors);
@@ -44,9 +52,12 @@ headersArray.forEach(function(item){
 //Paragraphs
 let paragraphs = document.getElementsByTagName('p');
 let paraOne = paragraphs[0];
-paraOne.addEventListener('mousemove', (event)=>{
-  event.target.style.border = "2px dashed #ff9999"
-})
-paraOne.addEventListener('mouseleave', (event)=>{
-  event.target.style.border = "0 transparent"
+let parArr = Array.from(paragraphs);
+parArr.forEach(function(item){
+  item.addEventListener('mousemove', (event)=>{
+    event.target.style.border = "2px dashed #ff9999"
+  })
+  item.addEventListener('mouseleave', (event)=>{
+    event.target.style.border = "0 transparent"
+  })
 })
