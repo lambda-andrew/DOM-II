@@ -1,12 +1,12 @@
 // Your code goes here
 
 // Home Nav
-const homeN =
-  document.querySelector(".nav-link");
-homeN.addEventListener("click", event => {
-  event.target.style.color = "red";
-  event.preventDefault();
-});
+// const homeN =
+//   document.querySelector(".nav-link");
+// homeN.addEventListener("click", event => {
+//   event.target.style.color = "red";
+//   event.preventDefault();
+// });
 
 // All Paragraphs
 const p = document.querySelectorAll('p');
