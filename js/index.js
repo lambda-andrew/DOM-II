@@ -1,4 +1,8 @@
 // Your code goes here
+
+//Global
+
+
 //Nav
 let anchors = document.getElementsByTagName('a');
 let anchorArray = Array.from(anchors);
@@ -25,6 +29,24 @@ imgArr.forEach(function(element){
   })
 })
 
-//Headers
+//Content Headers
 let lesserHeaders = document.getElementsByTagName('h2');
 let headersArray = Array.from(lesserHeaders);
+headersArray.forEach(function(item){
+  item.addEventListener('mousedown', (event)=>{
+    event.target.style.background = "#ff9999"
+  })
+  item.addEventListener('mouseup', (event)=>{
+    event.target.style.background = "transparent"
+  })
+})
+
+//Paragraphs
+let paragraphs = document.getElementsByTagName('p');
+let paraOne = paragraphs[0];
+paraOne.addEventListener('mousemove', (event)=>{
+  event.target.style.border = "2px dashed #ff9999"
+})
+paraOne.addEventListener('mouseleave', (event)=>{
+  event.target.style.border = "0 transparent"
+})
