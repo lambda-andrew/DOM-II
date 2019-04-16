@@ -13,9 +13,17 @@
 const p = document.querySelectorAll('p');
 const pHover = event => {
   event.target.style.background = 'yellow';
+  // TweenMax.to("p", 1, {
+  //   y: -300,
+  //   ease: Bounce.easeOut
+  // });
 }
 const pNoHover = event => {
   event.target.style.background = '';
+  // TweenMax.to("p", 1, {
+  //   y: 0,
+  //   ease: Bounce.easeOut
+  // });
 }
 
 p.forEach(item => {
@@ -63,3 +71,9 @@ for (let i = 0; i <= 2; i++) {
     item.target.style.color = "";
   });
 }
+
+// Footer
+const footer = document.querySelector('.footer');
+footer.addEventListener('click', event => {
+  event.target.style.color = 'violet';
+})
