@@ -9,6 +9,7 @@
 // });
 
 // All Paragraphs
+// This will also work for the nav links, if used to replace E.V.'s work
 const p = document.querySelectorAll('p');
 const pHover = event => {
   event.target.style.background = 'yellow';
