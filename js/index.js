@@ -13,6 +13,16 @@ navItems[0].addEventListener('mouseout', (event) => {
     event.target.style.borderRadius = '0px';
 });
 
+const logo = document.querySelector('.logo-heading');
 
+logo.addEventListener('mouseover', (event) => {
+    event.target.style.transition = 'transform .2s';
+    event.target.style.transform = 'scale(1.5)';
+});
+
+logo.addEventListener('mouseout', (event) => {
+    event.target.style.transition = 'transform .2s';
+    event.target.style.transform = 'scale(1.0)';
+});
 
 
