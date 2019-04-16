@@ -26,6 +26,7 @@ p.forEach(item => {
 });
 
 // IMAGES
+// GreenSock Stretch Task
 const img = document.querySelectorAll('img');
 const imgHover = event => {
   TweenMax.to(".intro img", 1, {
