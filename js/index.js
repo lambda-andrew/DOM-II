@@ -24,7 +24,26 @@ p.forEach(item => {
   item.addEventListener('mouseleave', pNoHover)
 });
 
+// All Nav Links - E.V.
+let homeN = document.querySelectorAll(".nav-link");
 
+for (let i = 0; i <= 3; i++) {
+  homeN[i].addEventListener("click", event => {
+    event.preventDefault();
+    event.target.style.color = "red";
+    // alert("hello");
+    console.log("anything");
+  });
+}
+
+for (let i = 0; i <= 3; i++) {
+  homeN[i].addEventListener("mouseover", event => {
+    event.preventDefault();
+    event.target.style.color = "green";
+    // alert("hello");
+    console.log("anything");
+  });
+}
 
 // Sign Up Buttons - E.V.
 let but = document.querySelectorAll(".btn")
