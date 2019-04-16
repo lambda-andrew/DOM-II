@@ -6,8 +6,6 @@ anchorArray[i].addEventListener('mouseover', (event) => {event.target.style.colo
 anchorArray[i].addEventListener('mouseleave', (event) => {event.target.style.color = "black"});
 }
 let header = document.querySelector('.logo-heading');
-header.addEventListener('keydown', (event)=>{
-  if(event.keyCode === 65){
-    event.target.style.fontSize = "5rem";
-  }
-})
+header.addEventListener('dblclick', (event)=>{
+event.target.style.fontSize = "5rem"
+});
