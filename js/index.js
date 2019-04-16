@@ -13,7 +13,33 @@ const p = document.querySelectorAll('p');
 const pHover = event => {
   event.target.style.background = 'yellow';
 }
+const pNoHover = event => {
+  event.target.style.background = '';
+}
 
 p.forEach(item => {
   item.addEventListener('mouseover', pHover)
 });
+p.forEach(item => {
+  item.addEventListener('mouseleave', pNoHover)
+});
+
+
+
+// Sign Up Buttons - E.V.
+let but = document.querySelectorAll(".btn")
+for (let i = 0; i <= 2; i++) {
+  but[i].addEventListener("mouseover", item => {
+    item.target.style.borderRadius = "2px";
+    item.target.style.border = "2px dashed black";
+    item.target.style.borderColor = "cyan";
+    item.target.style.color = "#0080FF";
+  });
+}
+for (let i = 0; i <= 2; i++) {
+  but[i].addEventListener("mouseleave", item => {
+    item.target.style.borderRadius = "";
+    item.target.style.border = "";
+    item.target.style.color = "";
+  });
+}
