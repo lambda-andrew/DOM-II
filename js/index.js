@@ -28,13 +28,13 @@ p.forEach(item => {
 // IMAGES
 const img = document.querySelectorAll('img');
 const imgHover = event => {
-  TweenMax.to("img", 1, {
+  TweenMax.to(".intro img", 1, {
     y: -300,
     ease: Bounce.easeOut
   });
 }
 const imgNoHover = event => {
-  TweenMax.to("img", 1, {
+  TweenMax.to(".intro img", 1, {
     y: 0,
     ease: Bounce.easeOut
   });
