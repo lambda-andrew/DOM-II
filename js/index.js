@@ -2,6 +2,11 @@
 
 //Global
 let container = document.querySelector('.container');
+let paraContainer = document.querySelector('.text-content');
+paraContainer.addEventListener('mousemove', (event)=>{
+  event.target.style.background = "#33d6ff"
+})
+//Input
 let input = document.createElement('input');
 container.appendChild(input)
 input.addEventListener('keydown', (event)=>{event.target.style.background = "#a6ff4d"})
@@ -17,6 +22,7 @@ let anchorArray = Array.from(anchors);
 for(let i = 0; i < anchorArray.length; i++){
   anchorArray[i].addEventListener('mouseover', (event) => {event.target.style.color = "red"});
   anchorArray[i].addEventListener('mouseleave', (event) => {event.target.style.color = "black"});
+  anchorArray[i].addEventListener('click', (event)=>{event.preventDefault();})
 }
 
 //Main Header
@@ -56,6 +62,7 @@ let parArr = Array.from(paragraphs);
 parArr.forEach(function(item){
   item.addEventListener('mousemove', (event)=>{
     event.target.style.border = "2px dashed #ff9999"
+    event.stopPropagation();
   })
   item.addEventListener('mouseleave', (event)=>{
     event.target.style.border = "0 transparent"
