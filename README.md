@@ -6,16 +6,16 @@ Fun Bus wants you to make their site more interactive. They are relying on you t
 
 **Follow these steps to set up and work on your project:**
 
-* [ ] Clone your OWN version of the repository.
-* [ ] Create a new branch: git checkout -b `<firstName-lastName>`.
-* [ ] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
-* [ ] Push commits: git push origin `<firstName-lastName>`.
+* [/] Clone your OWN version of the repository.
+* [/] Create a new branch: git checkout -b `<firstName-lastName>`.
+* [/] Implement the project on your newly created `<firstName-lastName>` branch, committing changes regularly.
+* [/] Push commits: git push origin `<firstName-lastName>`.
 
 **Follow these steps for completing your project.**
 
-* [ ] Submit a Pull-Request to merge <firstName-lastName> Branch into master. **Please don't merge your own pull request**
-* [ ] Add your project manager as a reviewer on the pull-request
-* [ ] Your project manager will count the project as complete by merging the branch back into master.
+* [/] Submit a Pull-Request to merge <firstName-lastName> Branch into master. **Please don't merge your own pull request**
+* [/] Add your project manager as a reviewer on the pull-request
+* [/] Your project manager will count the project as complete by merging the branch back into master.
 
 ## Task 1: Set Up LESS Preprocessor
 
@@ -47,11 +47,3 @@ Using the 10 unique events, find ways to update the DOM in creative ways. For ex
 
 * [ ] Nest two similar events somewhere in the site and prevent the event propagation properly
 * [ ] Stop the navigation from items from refreshing the page by using `preventDefault()`
-
-## Stretch Task:
-
-* [ ] Go look at [GSAP](https://greensock.com/) and implement the animations found in that library with your custom events.
-
-## Stretch assignment
-
-* [ ] Take a look at the [stretch assignment](stretch-assignment) and follow the instructions in the read me file.
