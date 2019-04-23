@@ -15,15 +15,22 @@ for(let i = 0; i < anchorArray.length; i++){
 }
 
 const logo = document.querySelector('.logo-heading')
-logo.addEventListener('click', (event) => event.target.style.fontSize = "5rem")
+logo.addEventListener('click', () => five())
 logo.addEventListener('dblclick', (event) => event.target.style.fontSize = "4rem")
+function five(){
+  logo.style.fontSize = "5rem"
+  event.stopPropagation()
+}
 logo.addEventListener('mouseover', (event) => event.target.style.cursor = "pointer")
 
 
 const input = document.createElement('input')
 input.addEventListener('keydown', (event) => event.target.style.background = "blue")
 input.addEventListener('keyup', (event) => event.target.style.background = "orange")
-input.addEventListener('focus', (event) => event.target.style.background = "yellow")
+input.addEventListener('focus', () => yellow())
+function yellow(){
+  input.style.background = "yellow"
+}
 logo.prepend(input)
 
 
