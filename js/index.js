@@ -9,6 +9,11 @@ navItems[2].addEventListener('mouseleave', (event) => event.target.style.color =
 navItems[3].addEventListener('mouseover', (event) => event.target.style.color = "orange")
 navItems[3].addEventListener('mouseleave', (event) => event.target.style.color = "black")
 
+let anchorArray = Array.from(navItems);
+for(let i = 0; i < anchorArray.length; i++){
+  anchorArray[i].addEventListener('click', (event)=>{event.preventDefault()})
+}
+
 const logo = document.querySelector('.logo-heading')
 logo.addEventListener('click', (event) => event.target.style.fontSize = "5rem")
 logo.addEventListener('dblclick', (event) => event.target.style.fontSize = "4rem")
