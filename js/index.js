@@ -23,8 +23,7 @@ logo.addEventListener('mouseover', (event) => event.target.style.cursor = "point
 const input = document.createElement('input')
 input.addEventListener('keydown', (event) => event.target.style.background = "blue")
 input.addEventListener('keyup', (event) => event.target.style.background = "orange")
-input.addEventListener('focus', (event) => {event.target.style.background = "yellow",
-event.stopPropagation()})
+input.addEventListener('focus', (event) => event.target.style.background = "yellow")
 logo.prepend(input)
 
 
@@ -32,12 +31,20 @@ const busImg = document.querySelector('.container img')
 busImg.addEventListener('dragstart', (event) => event.target.style.border = "1px dashed grey")
 busImg.addEventListener('dragend', (event) => event.target.style.border = "1px dashed transparent")
 
-const firstContent = document.querySelector('.intro')
+const firstContent = document.querySelector('.intro p')
 firstContent.addEventListener('copy', () => myEvent())
 
 function myEvent(){
   alert("OH.");
 }
 
-const firstHeader = document.querySelector('.intro h2')
-firstHeader.addEventListener('focus', (event) => event.target.style.border = "2px outset orange")
+const secondHeader = document.querySelector('.text-content');
+const secondPara = document.querySelector('.text-content p')
+
+secondHeader.addEventListener('click', (event) => event.target.style.background = "purple")
+secondPara.addEventListener('click', () => prop())
+
+function prop(){
+  secondPara.style.background = "orange"
+  event.stopPropagation();
+}
